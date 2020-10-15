@@ -10,7 +10,7 @@ router.register(r'posts/(?P<post_id>\d+)/comments', views.CommentViewSet,
 
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('follow/', views.FollowList.as_view()),
-    path('group/', views.GroupList.as_view()),
+    path('v1/', include(router.urls)),
+    path('v1/follow/', views.FollowList.as_view()),
+    path('v1/group/', views.GroupList.as_view()),
 ]
